@@ -1,0 +1,96 @@
+.tunes-view {
+    background-color: #eeeeee;
+    -webkit-transition: -webkit-filter 250ms;
+    transition: -webkit-filter 250ms;
+    -o-transition: filter 250ms;
+    -moz-transition: filter 250ms;
+    transition: filter 250ms;
+    transition: filter 250ms, -webkit-filter 250ms;
+}
+
+.blur .tunes-view {
+    -webkit-filter: blur(5px) grayscale(80%);
+    filter: blur(5px) grayscale(80%);
+}
+
+.video:hover {
+    -webkit-transform: scale(1.10);
+    -moz-transform: scale(1.10);
+    -o-transform: scale(1.10);
+    transform: scale(1.10);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+    .thumbnail {
+        -webkit-filter: none;
+        filter: none;
+    }
+}
+
+.video {
+    -webkit-transition: transform 500ms ease;
+    -moz-transition: transform 200ms ease;
+    -o-transition: transform 200ms ease;
+    -webkit-transition: -webkit-transform 200ms ease;
+    transition: -webkit-transform 200ms ease;
+    -o-transition: -o-transform 200ms ease;
+    -moz-transition: transform 200ms ease, -moz-transform 200ms ease;
+    transition: transform 200ms ease;
+    transition: transform 200ms ease, -webkit-transform 200ms ease, -moz-transform 200ms ease, -o-transform 200ms ease;
+    width: 16vw;
+    height: 16vw;
+    text-align: center;
+    background: #fff;
+    color: #777;
+    margin: 1.2vw;
+    cursor: pointer;
+    .thumbnail {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        -webkit-transition: -webkit-filter 300ms;
+        transition: -webkit-filter 300ms;
+        -o-transition: filter 300ms;
+        -moz-transition: filter 300ms;
+        transition: filter 300ms;
+        transition: filter 300ms, -webkit-filter 300ms;
+        -webkit-filter: grayscale(80%);
+        filter: grayscale(80%);
+    }
+    figure {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+    }
+    figcaption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: .25vw 1vw;
+        font-size: 1.1vw;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, .5);
+        color: white;
+        .title,
+        .artist {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .title {
+            font-weight: bold;
+        }
+    }
+}
